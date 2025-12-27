@@ -7,44 +7,59 @@ This repository contains my completed work for the JP Morgan Chase & Co. Softwar
 
 ---
 
-## 🚀 Project Overview
+## 🎓 Key Learning Outcomes
 
-### 1. Natural Gas Price Prediction
-* **Objective**: Forecast natural gas prices to assist in trading and storage decisions.
-* **Methodology**: 
-    * Utilized `statsmodels` for **Seasonal Decomposition** to isolate trend, seasonality, and residuals in historical price data.
-    * Developed a forecasting model to predict future price points based on identified cyclical patterns.
-* **Key Skills**: Time series analysis, statistical modeling with `statsmodels`.
+* **Quantitative Finance**: Developed a deep understanding of how to price complex financial instruments like storage contracts using Net Present Value (NPV).
+* **Time Series Analysis**: Learned to isolate seasonal patterns and trends from commodity price data to make informed market predictions.
+* **Advanced Machine Learning**: Mastered gradient boosting techniques with **XGBoost** and focused on the importance of feature engineering and mutual information over automated pipelines.
+* **Optimization Strategies**: Applied algorithmic thinking to credit scoring, moving from simple grouping to statistical optimization using Log-Likelihood and search algorithms.
 
-### 2. Commodity Storage Contract Pricing
-* **Objective**: Build a pricing engine for natural gas storage contracts.
-* **Methodology**: 
-    * Modeled injection/withdrawal schedules, storage limits, and daily costs.
-    * Calculated the Net Present Value (NPV) of contracts by integrating market price forecasts and logistical constraints.
-* **Key Skills**: Financial derivatives pricing, contract valuation.
+---
 
-### 3. Credit Risk Analysis (Machine Learning)
-* **Objective**: Predict loan default probabilities to estimate expected financial losses.
-* **Methodology**: 
-    * **Model**: Implemented an **XGBoost Classifier** for gradient-boosted decision trees.
-    * **Feature Engineering**: Mapped and engineered new features (e.g., loan-to-income and debt-to-income ratios) to maximize **Mutual Information** and improve model predictive power.
-    * **Evaluation**: Assessed model performance using **Confusion Matrices** to analyze Type I and Type II errors.
-* **Key Skills**: Supervised learning, feature engineering, risk quantification.
+## 🚀 Project Sections
 
-### 4. FICO Score Bucketing & Optimization
-* **Objective**: Create an optimized rating system by segmenting FICO scores into discrete buckets.
-* **Methodology**: 
-    * Developed a custom **Log-Likelihood** function to evaluate the quality of score segmentation.
-    * Employed a **Brute Force** optimization approach to identify the boundaries that maximize the log-likelihood across buckets.
-* **Key Skills**: Statistical optimization, credit scoring, algorithmic problem solving.
+### 1. Natural Gas Price Prediction 📈
+**Objective**: Forecast natural gas prices to assist in trading and storage decisions.
+
+* **Methodology**: Utilized `statsmodels` for **Seasonal Decomposition** to isolate the trend, seasonality, and residuals in 4 years of historical price data.
+* **Implementation**: Developed a forecasting model to predict future price points based on identified monthly cyclical patterns.
+* **Skills**: Time series analysis, statistical modeling, and data visualization.
+
+---
+
+### 2. Commodity Storage Contract Pricing 💰
+**Objective**: Build a robust pricing engine for natural gas storage contracts.
+
+* **Methodology**: Modeled a comprehensive financial framework considering injection/withdrawal schedules, storage capacity limits, and daily accrual costs.
+* **Logic**: Calculated the Net Present Value (NPV) by integrating price forecasts with logistical constraints and the time value of money.
+* **Skills**: Financial engineering, derivatives pricing, and decision algorithms.
+
+---
+
+### 3. Credit Risk Analysis 🎯
+**Objective**: Predict loan default probabilities and quantify expected financial losses.
+
+* **Model**: Implemented an **XGBoost Classifier** to handle complex non-linear relationships in the borrower data.
+* **Feature Engineering**: Instead of standard pipelines, I focused on manual feature mapping, specifically calculating **debt-over-income ratios** to maximize **Mutual Information** between features and the target variable.
+* **Evaluation**: Validated model performance using **Confusion Matrices** to meticulously track precision and recall for default cases.
+* **Skills**: Supervised learning, risk management, and feature optimization.
+
+---
+
+### 4. FICO Score Bucketing & Optimization 📊
+**Objective**: Create a rating system by segmenting FICO scores into discrete, optimized buckets.
+
+* **Methodology**: Developed a custom **Log-Likelihood** objective function to measure the quality of the score segmentation.
+* **Optimization**: Employed a **Brute Force** search algorithm to identify the exact boundaries that maximize the statistical significance of each credit bucket.
+* **Skills**: Statistical optimization, credit scoring methodologies, and algorithmic problem solving.
 
 ---
 
 ## 🛠️ Technical Stack
 
 * **Language**: Python
-* **Machine Learning**: XGBoost, Scikit-learn
-* **Time Series**: Statsmodels
+* **Machine Learning**: XGBoost, Scikit-learn (Mutual Information, Confusion Matrix)
+* **Time Series**: Statsmodels (Seasonal Decomposition)
 * **Data Analysis**: Pandas, NumPy
 * **Visualization**: Matplotlib, Seaborn
 
@@ -54,7 +69,7 @@ This repository contains my completed work for the JP Morgan Chase & Co. Softwar
 
 ```text
 .
-├── Natural Gas Prediction/      # Seasonal decomposition and price forecasting
-├── Commodity Storage/          # Storage contract pricing engine
-├── Credit Risk Analysis/       # XGBoost model and feature engineering
+├── Natural Gas Prediction/      # Seasonal decomposition and forecasting
+├── Commodity Storage/          # Storage contract pricing logic
+├── Credit Risk Analysis/       # XGBoost model and engineered features
 └── Bucket FICO scores/         # Log-likelihood optimization scripts
